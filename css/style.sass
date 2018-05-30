@@ -1,0 +1,527 @@
+@import 'sass/mixins.sass'
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,900&subset=cyrillic')
+
+
+$black: #000
+$white: #fff
+$grey: #767676
+$blue: #0094a7
+$red: #d42525
+$orange: #fb8228
+$a: ease-out .16s
+
+
+.fb-row
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(space-between)
+	+align-items(center)
+
+.fb-row-center
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(center)
+	+align-items(center)
+
+.fb-row-top
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(space-between)
+	+align-items(flex-start)
+
+.fb-row-start
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(flex-start)
+	+align-items(flex-start)
+
+.clearfix:after 
+	content: ''
+	display: block
+	clear: both 
+	height: 0
+	visibility: hidden
+
+
+html
+	height: 100%
+
+body 
+	min-height: 100%
+	line-height: 1.4
+	font-size: 14px
+	font-family: 'Montserrat', sans-serif
+
+
+.button
+	border-radius: 30px
+	text-align: center
+	height: 42px
+	line-height: 42px
+	padding: 0 20px
+	cursor: pointer
+
+	span 
+		display: inline-block
+		vertical-align: middle
+		margin: 0 4px
+
+	img
+		display: inline-block
+		vertical-align: middle
+		margin: 0 4px
+
+	
+.ponches-layout
+	position: relative
+	height: 100%
+	background: #ebebeb
+	padding-left: 100px
+	padding-right: 30px
+
+
+.nav--left
+	position: fixed
+	left: 0
+	top: 0
+	bottom: 0
+	width: 70px
+	background: #fff
+	font-size: 0
+	text-align: center
+	padding-top: 40px
+
+.nav-logo
+	display: inline-block
+	vertical-align: middle
+	margin-bottom: 60px
+
+	img
+		height: 110px
+		display: block
+
+.nav-links
+	padding: 0
+	margin: 0
+
+	li 
+
+	a 
+		display: block
+		width: 100%
+		height: 60px
+		line-height: 60px
+		text-align: center
+		transition: $a
+
+		&:hover
+			background: $black
+			transition: $a
+
+		img
+			display: inline
+			vertical-align: middle
+			height: 24px
+
+
+.main
+	width: 100%
+
+
+.header
+	width: 100%
+	padding-top: 30px
+	text-align: right
+
+	&__user-mail
+		display: inline-block
+		vertical-align: middle
+		margin: 0 8px
+
+	&__balance
+		@extend .button
+		display: inline-block
+		vertical-align: middle
+		margin: 0 8px
+		background: $black
+		color: $white
+
+		span 
+			margin: 0 4px
+
+	&__exit
+		@extend .button
+		display: inline-block
+		vertical-align: middle
+		margin: 0 8px
+		background: $white
+
+
+.page-title
+	margin-bottom: 60px
+
+	&__h2
+		font-size: 45px
+		margin: 0 0 10px
+
+	a 
+		display: block
+
+		img
+			display: inline-block
+			vertical-align: middle
+			width: 25px
+			margin-right: 5px
+
+		span 
+			display: inline-block
+			vertical-align: middle
+			color: $grey
+			font-size: 14px
+
+
+.page-content
+
+.page-block
+	border-radius: 10px
+	position: relative
+	margin: 0 1% 40px
+	padding: 40px 20px 30px 35px
+	background: $white
+
+.pb--30
+	width: 30%
+
+
+.pb--60
+	width: 66%
+
+
+.pb--100
+	width: 100%
+
+
+.pb-step-1
+	background: $blue
+	min-height: 450px
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: -41px
+		right: 10px
+		width: 130px
+		height: 80px
+		background: url(../img/zero-1.png) no-repeat center
+
+.pb-title--step-1
+	font-size: 28px
+	color: $white
+	margin: 0 0 12px
+	line-height: 30px
+
+	small
+		font-size: 14px
+
+.pb-text--step-1
+	color: $white
+	margin: 0 0 15px
+
+	strong
+		font-size: 16px
+
+.pb-input--step-1
+	display: block
+	width: 100%
+	border: none
+	border-bottom: 1px solid rgba( #fff, .6 )
+	outline: none
+	padding-bottom: 7px
+	margin: 0 0 30px
+	font-size: 14px
+	color: #fff
+	background: none
+
+
+
+
+
+.pb-step-2
+	min-height: 450px
+
+.step-2-pick
+	width: 54%
+
+.step-2-interest
+	width: 46%
+
+.pb-title
+	font-size: 24px
+	margin: 0 0 20px
+
+.pb-text
+	font-size: 14px
+	margin: 0 0 20px
+
+.grey-text
+	color: $grey
+
+.blue-text
+	color: $blue
+
+.info-text
+	position: relative
+
+	&:before
+		content: '*'
+		position: absolute
+		left: -12px
+		top: 2px 
+		font-size: 18px
+
+.bold-text
+	font-weight: 700
+	
+
+.pick-row
+	margin-bottom: 29px
+	font-size: 0
+
+	&__label
+		display: inline-block
+		vertical-align: middle
+		width: 100px
+		font-size: 14px
+
+	&__pick-actions
+		display: inline-block
+		vertical-align: middle
+		width: calc(100% - 100px)
+
+.pb-step-2 .pick-row:last-child
+		margin-bottom: 0
+
+.pick-radio-box
+	font-size: 14px
+	display: inline-block
+	vertical-align: middle
+	margin-right: 20px
+
+	input 
+		display: none
+
+	label
+		display: inline-block
+		font-size: 16px
+		cursor: pointer
+		transform: scale(0.9)
+		transition: $a
+
+	input:checked + label 
+		color: $blue
+		transform: scale(1)
+
+.pick-actions__select
+	display: block
+	width: 200px
+	font-size: 15px
+	outline: none
+	background: none
+	border: none
+	padding-bottom: 7px
+	padding-right: 15px
+	border-bottom: 1px solid $grey
+	cursor: pointer
+
+.interest-pick
+	font-size: 0
+	margin-bottom: 10px
+
+.interest-radio-box
+	display: inline-block
+	vertical-align: middle
+	font-size: 0px
+	margin-right: 25px
+	margin-bottom: 5px
+
+	input 
+		display: none
+
+	label 
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		cursor: pointer
+		font-size: 14px
+		padding: 1px 3px 1px 0
+		transition: $a
+
+		&:before
+			display: inline-block
+			vertical-align: middle
+			transition: $a
+
+
+	input:checked +label 
+		color: $blue
+		transition: $a
+
+		&:before
+			content: ''
+			position: absolute
+			left: -11px
+			top: 7px
+			width: 6px
+			height: 6px
+			border-radius: 100%
+			background: $blue
+			transition: $a
+
+.step-2-buttons
+	padding-top: 20px
+
+.send-form
+	@extend .button
+	outline: none
+	background: $blue
+	color: $white
+	border: none
+	font-weight: 700
+	padding: 0 25px
+	margin-right: 15px
+
+.button-link-page
+	@extend .button
+	display: inline-block
+	vertical-align: middle
+	background: $white
+	border: 2px solid $blue
+	font-weight: 700
+	padding: 0 25px
+	color: $blue
+	line-height: 38px
+	margin-right: 15px
+
+.ster-2-status-info-text
+	font-size: 15px
+	display: inline-block
+	vertical-align: middle
+	width: 280px
+	font-weight: 700
+	
+
+.pb-step-3
+	background: $black
+	position: relative
+	color: $white
+
+	&:before
+		content: ''
+		position: absolute
+		right: -34px
+		top: -35px
+		width: 200px
+		height: 70px
+		background: url(../img/zero-3.png) center no-repeat
+		background-size: cover
+
+	.page-title
+		margin: 0 0 28px
+		font-size: 24px
+
+.pb-3-free
+	width: 30%
+
+	.pb-text strong
+		font-weight: 700
+
+	.pb-text span 
+		color: $blue
+		font-weight: 700
+
+
+.pb-3-profile
+	width: 30%
+
+.pb-3-profile__input
+	display: block
+	width: 250px
+	background: none
+	outline: none
+	border: none 
+	border-bottom: 1px solid $white
+	color: $white
+	padding-bottom: 7px
+
+.pb-3-text
+	width: 30%
+	padding-top: 10px
+
+
+
+.pb-step-4
+
+	.page-title
+		font-size: 24px
+		margin: 0 0 25px
+
+	.pb-text
+		margin-bottom: 14px
+
+.pb-step-5
+
+	.page-title
+		font-size: 24px
+		margin: 0 0 25px
+
+.step-5-text--left
+	width: 55%
+	padding-right: 2%	
+
+.step-5-text--right
+	width: 45%
+
+.step-5-checkboxes
+	padding-top: 20px
+	margin-bottom: 25px
+
+.status-ok-image
+	position: relative
+	border-radius: 100%
+	width: 40px
+	height: 40px
+	background: $blue
+	margin-right: 30px
+
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		top: 45%
+		width: 10px
+		height: 5px
+		transform: translate(-50%, -50%) rotate(-45deg)
+		border: none
+		border-left: 1px solid #fff
+		border-bottom: 1px solid #fff
+
+.disable-comments
+	@extend .button
+	background: $orange
+	padding: 0 25px
+	border: none
+	outline: none
+	font-weight: 700
+	color: $white
+	margin-right: 30px
+	width: 180px
+
+
+
+
+
+
+
+// RESPONSIVE
+@media only screen and (max-width : 400px) 

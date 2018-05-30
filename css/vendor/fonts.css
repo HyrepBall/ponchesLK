@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Quinta-Regular";
+	src: url("../../fonts/quinta-reg.woff") format("woff");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Quinta-Black";
+	src: url("../../fonts/quinta-black.woff") format("woff");
+	font-style: normal;
+	font-weight: normal;
+}
