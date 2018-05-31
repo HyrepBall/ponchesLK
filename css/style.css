@@ -95,18 +95,18 @@ body {
   font-size: 14px;
   font-family: "Montserrat", sans-serif; }
 
-.button, .header__balance, .header__exit, .send-form, .button-link-page, .disable-comments {
+.button, .header__balance, .header__exit, .send-form, .button-link-page, .disable-comments, .balance-form__pay, .balance-form__tarrifs-link, .balance-form__exchange-button, .tarifs-button {
   border-radius: 30px;
   text-align: center;
   height: 42px;
   line-height: 42px;
   padding: 0 20px;
   cursor: pointer; }
-  .button span, .header__balance span, .header__exit span, .send-form span, .button-link-page span, .disable-comments span {
+  .button span, .header__balance span, .header__exit span, .send-form span, .button-link-page span, .disable-comments span, .balance-form__pay span, .balance-form__tarrifs-link span, .balance-form__exchange-button span, .tarifs-button span {
     display: inline-block;
     vertical-align: middle;
     margin: 0 4px; }
-  .button img, .header__balance img, .header__exit img, .send-form img, .button-link-page img, .disable-comments img {
+  .button img, .header__balance img, .header__exit img, .send-form img, .button-link-page img, .disable-comments img, .balance-form__pay img, .balance-form__tarrifs-link img, .balance-form__exchange-button img, .tarifs-button img {
     display: inline-block;
     vertical-align: middle;
     margin: 0 4px; }
@@ -275,6 +275,9 @@ body {
 
 .blue-text {
   color: #0094a7; }
+
+.orange-text {
+  color: #fb8228; }
 
 .info-text {
   position: relative; }
@@ -492,5 +495,193 @@ body {
   color: #fff;
   margin-right: 30px;
   width: 180px; }
+
+.balance-title {
+  margin: 0 0 30px;
+  font-size: 35px; }
+
+.history-block {
+  background: none;
+  padding: 0;
+  width: 61%; }
+
+.balance-month-block {
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #767676; }
+
+.balance-more-button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline; }
+
+.history-month-title {
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 15px; }
+
+.balance-month-row {
+  position: relative;
+  background: #fff;
+  border-radius: 25px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 12px 150px 12px 18px;
+  margin-bottom: 15px; }
+  .balance-month-row .history-row__post-number {
+    text-decoration: underline;
+    display: inline-block;
+    vertical-align: middle; }
+  .balance-month-row .history-row-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0; }
+  .balance-month-row .history-row-date {
+    position: absolute;
+    right: 20px;
+    top: 12px; }
+  .balance-month-row .history-row__disput {
+    text-decoration: underline;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer; }
+
+.balance-form {
+  background: #000;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  color: #fff;
+  width: 34%; }
+
+.balance-form__current {
+  margin-bottom: 30px; }
+
+.balance-form__current-row {
+  margin-bottom: 10px;
+  font-size: 0; }
+
+.balance-form__row--title {
+  text-align: left;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%; }
+
+.balance-form__row--value {
+  text-align: right;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%; }
+
+.balance-form__buttons {
+  margin-bottom: 20px; }
+
+.balance-form__pay {
+  background: #0094a7;
+  width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px; }
+
+.balance-form__tarrifs-link {
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 120px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.balance-form__info {
+  margin-bottom: 25px; }
+
+.balance-form__exchange {
+  font-size: 0; }
+
+.balance-form__exchange-input {
+  width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px; }
+  .balance-form__exchange-input input {
+    display: inline-block;
+    vertical-align: bottom;
+    background: none;
+    width: 100px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    outline: none; }
+  .balance-form__exchange-input span {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: bottom;
+    color: #fff; }
+
+.balance-form__exchange-button {
+  width: 185px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #fff;
+  line-height: 36px; }
+
+.tarifs-content .fb-row-top {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+.tarifs-item {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 25px 40px 50px;
+  width: 29%;
+  margin: 0 2% 30px; }
+
+.tarif-1-block {
+  padding-top: 250px; }
+  .tarif-1-block .tarifs-button {
+    margin-top: 40px; }
+
+.tarif-2-block {
+  padding-bottom: 200px; }
+  .tarif-2-block .tarifs-button {
+    margin-top: 20px; }
+
+.tarif-3-block {
+  padding-top: 170px; }
+  .tarif-3-block .tarifs-button {
+    margin-top: 10px; }
+
+.tarifs-title {
+  font-size: 22px;
+  margin: 0 0 12px; }
+
+.tarifs-subtitle {
+  font-size: 16px;
+  margin: 0 0 8px; }
+
+.tarifs-text {
+  margin: 0 0 8px;
+  font-size: 15px; }
+
+.tarifs-button {
+  display: inline-block;
+  background: #0094a7;
+  color: #fff;
+  padding: 0 25px;
+  height: 45px;
+  line-height: 45px; }
 
 /*# sourceMappingURL=style.css.map */

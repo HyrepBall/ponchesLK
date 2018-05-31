@@ -270,6 +270,9 @@ body
 .blue-text
 	color: $blue
 
+.orange-text
+	color: $orange
+
 .info-text
 	position: relative
 
@@ -516,6 +519,211 @@ body
 	color: $white
 	margin-right: 30px
 	width: 180px
+
+
+.balance-title
+	margin: 0 0 30px
+	font-size: 35px
+
+
+.history-block
+	background: none
+	padding: 0
+	width: 61%
+
+.balance-month-block
+	position: relative
+	padding-bottom: 25px
+	margin-bottom: 30px
+	border-bottom: 1px solid $grey
+
+.balance-more-button
+	display: inline-block
+	cursor: pointer
+	text-decoration: underline
+
+.history-month-title
+	font-size: 14px
+	position: absolute
+	bottom: 10px
+	right: 15px
+
+.balance-month-row
+	position: relative
+	background: $white
+	border-radius: 25px
+	display: inline-block
+	vertical-align: top
+	padding: 12px 150px 12px 18px
+	margin-bottom: 15px
+
+	.history-row__post-number
+		text-decoration: underline
+		display: inline-block
+		vertical-align: middle
+
+	.history-row-text
+		display: inline-block
+		vertical-align: middle
+		margin: 0
+
+	.history-row-date
+		position: absolute
+		right: 20px
+		top: 12px
+
+	.history-row__disput
+		text-decoration: underline
+		display: inline-block
+		vertical-align: middle
+		cursor: pointer
+
+.balance-form
+	background: $black
+	padding-top: 100px
+	padding-bottom: 60px
+	color: $white
+	width: 34%
+
+.balance-form__current
+	margin-bottom: 30px
+
+.balance-form__current-row
+	margin-bottom: 10px
+	font-size: 0
+
+.balance-form__row--title
+	text-align: left
+	font-size: 16px
+	display: inline-block
+	vertical-align: top
+	width: 50%
+
+.balance-form__row--value
+	text-align: right
+	font-size: 14px
+	display: inline-block
+	vertical-align: top
+	width: 50%
+
+.balance-form__buttons
+	margin-bottom: 20px
+
+.balance-form__pay
+	@extend .button 
+	background: $blue
+	width: 150px
+	display: inline-block
+	vertical-align: middle
+	margin-right: 10px
+
+.balance-form__tarrifs-link
+	@extend .button
+	background: none
+	color: $white
+	border: 2px solid $white
+	width: 120px
+	display: inline-block
+	vertical-align: middle
+
+.balance-form__info
+	margin-bottom: 25px
+
+.balance-form__exchange
+	font-size: 0
+
+.balance-form__exchange-input
+	width: 150px
+	display: inline-block
+	vertical-align: middle
+	margin-right: 5px
+	
+
+	input 
+		display: inline-block
+		vertical-align: bottom
+		background: none
+		width: 100px
+		padding-bottom: 10px
+		margin-right: 10px
+		font-size: 30px
+		color: $white
+		border: none
+		border-bottom: 2px solid $white
+		text-align: center
+		outline: none
+
+	span 
+		font-size: 16px
+		display: inline-block
+		vertical-align: bottom
+		color: $white
+
+.balance-form__exchange-button
+	@extend .button
+	width: 185px
+	display: inline-block
+	vertical-align: middle
+	font-size: 13px
+	font-weight: 700
+	color: $white
+	border: 2px solid $white
+	line-height: 36px
+
+
+.tarifs-content
+	.fb-row-top
+		+justify-content(center)
+
+.tarifs-item
+	position: relative
+	background: $white
+	border-radius: 15px 
+	padding: 40px 25px 40px 50px
+	width: 29%
+	margin: 0 2% 30px
+
+.tarif-1-block
+	padding-top: 250px
+
+	.tarifs-button
+		margin-top: 40px
+
+.tarif-2-block
+	padding-bottom: 200px
+
+	.tarifs-button
+		margin-top: 20px
+
+.tarif-3-block
+	padding-top: 170px
+
+	.tarifs-button
+		margin-top: 10px
+
+.tarifs-title
+	font-size: 22px
+	margin: 0 0 12px
+
+.tarifs-subtitle
+	font-size: 16px
+	margin: 0 0 8px
+
+.tarifs-text
+	margin: 0 0 8px 
+	font-size: 15px
+
+.tarifs-button
+	@extend .button
+	display: inline-block
+	background: $blue
+	color: $white
+	padding: 0 25px
+	height: 45px
+	line-height: 45px
+
+
+
 
 
 
