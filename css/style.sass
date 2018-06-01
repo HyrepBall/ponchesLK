@@ -4,7 +4,7 @@
 
 $black: #000
 $white: #fff
-$grey: #767676
+$grey: #9f9f9f
 $blue: #0094a7
 $red: #d42525
 $orange: #fb8228
@@ -118,15 +118,20 @@ body
 			background: $black
 			transition: $a
 
-		img
-			display: inline
+			svg 
+				fill: $white
+				transition: $a
+
+		svg
+			height: 28px
+			display: inline-block
 			vertical-align: middle
-			height: 24px
+			transition: $a
 
 
 .main
 	width: 100%
-
+	min-height: 100vh
 
 .header
 	width: 100%
@@ -232,16 +237,16 @@ body
 		font-size: 16px
 
 .pb-input--step-1
-	display: block
-	width: 100%
-	border: none
-	border-bottom: 1px solid rgba( #fff, .6 )
-	outline: none
-	padding-bottom: 7px
-	margin: 0 0 30px
-	font-size: 14px
-	color: #fff
-	background: none
+		display: block
+		width: 100%
+		border: none
+		border-bottom: 1px solid rgba( #fff, .6 )
+		outline: none
+		padding-bottom: 7px
+		margin: 0 0 30px
+		font-size: 14px
+		color: #fff
+		background: none
 
 
 
@@ -272,6 +277,12 @@ body
 
 .orange-text
 	color: $orange
+
+.left-text
+	text-align: left
+
+.right-text
+	text-align: right
 
 .info-text
 	position: relative
@@ -679,7 +690,7 @@ body
 	position: relative
 	background: $white
 	border-radius: 15px 
-	padding: 40px 25px 40px 50px
+	padding: 40px 30px 40px 50px
 	width: 29%
 	margin: 0 2% 30px
 
@@ -723,8 +734,384 @@ body
 	line-height: 45px
 
 
+.task-step-1-block
+	color: $white
+
+.task-step-1__input
+	display: block
+	width: 100%
+	border: none
+	border-bottom: 1px solid rgba( #fff, .6 )
+	outline: none
+	padding-bottom: 7px
+	margin: 0 0 30px
+	font-size: 40px
+	color: #fff
+	font-weight: 700
+	background: none
+
+.task-step-1__balance
+	
+.task-step-1__balance-row
+	font-size: 0
+	
+	& div
+		font-size: 14px
+		font-weight: 700
+		display: inline-block
+		vertical-align: middle
+		width: 50%
+
+.step-2-task
+	@extend .step-2-pick
+	width: 48%
+
+.task-textarea
+	display: block
+	width: 100%
+	min-height: 200px
+	line-height: 20px
+	font-weight: 300
+	padding: 25px
+	border-radius: 10px
+	border: 1px solid $grey
+	color: $grey
+	outline: none
+	resize: none
+	margin: 0
+
+.step-2-comments
+	width: 48%
+
+.task-pick-text
+	margin-bottom: 20px
+	padding-right: 10px
+
+	input 
+		display: none
+
+	label 
+		display: block
+		width: 100%
+		position: relative
+		cursor: pointer	
+		color: $grey
+		transition: $a
+
+		&:after
+			content: ''
+			position: absolute
+			right: 0px
+			top: 5px
+			width: 6px
+			height: 6px
+			background: $blue
+			opacity: 0
+			border-radius: 100%
+
+		&:hover
+			color: #000
+
+	input:checked+label 
+		color: $blue
+		animation: .6s zoom
+		transition: $a
+
+		&:after
+			opacity: 1
 
 
+@keyframes zoom 
+	0%
+		transform: scale(0.95)
+		opacity: 0
+
+	100%
+		transform: scale(1)
+		opacity: 1
+
+.task-pick-button
+	@extend .button 
+	display: inline-block
+	vertical-align: middle
+	background: $blue
+	color: $white
+	font-weight: 700
+
+.task-pick-button-status
+	color: #00a718
+	font-weight: 700
+
+.task-table-block
+	background: none
+	padding: 0
+
+.task-table-container
+
+.task-table-header
+	
+
+	&.task-table-row
+		background: none
+		color: #000
+		font-weight: 700
+		margin-bottom: 0
+
+.task-table-month
+	position: relative
+	padding-bottom: 10px
+	margin-bottom: 20px
+	border-bottom: 1px solid $grey
+
+.tt-month-title
+	position: absolute
+	bottom: 20px
+	right: 0
+	font-size: 14px
+	color: $grey
+
+.task-table-row
+	width: 100%
+	max-width: 900px
+	font-size: 0
+	background: $white
+	color: $grey
+	font-weight: 400
+	border-radius: 20px
+	margin-bottom: 15px
+
+.task-table-cell
+	font-size: 14px
+	height: 40px
+	line-height: 40px
+	display: inline-block
+	vertical-align: middle
+
+.tt-account
+	width: 20%
+	padding-left: 20px
+
+.tt-status
+	width: 20%
+	text-align: center
+
+.tt-progress
+	width: 20%
+
+.tt-date
+	width: 20%
+
+.tt-details
+	width: 20%
+	text-align: right
+	padding-right: 20px
+	color: $blue
+
+	&:hover
+		text-decoration: underline
+
+
+.feed-content
+
+.feed-list
+	width: 100%
+	max-width: 800px
+
+.feed-item
+	border-radius: 20px 
+	background: $white
+	padding: 50px 30px
+	margin-bottom: 30px
+	position: relative
+
+	.feed-item__title
+		padding: 0 270px 0 0
+
+	.feed-item__text
+		padding: 0 270px 0 0
+
+	&.feed-item--system
+
+		.feed-item__title
+			padding: 0
+
+		.feed-item__text
+			padding: 0
+
+
+.feed-item__close
+	position: absolute
+	right: 25px
+	top: 20px
+	font-size: 14px
+	cursor: pointer
+
+.feed-item__title
+	font-size: 16px
+	font-weight: 700
+	margin: 0 0 20px
+
+.feed-item__text
+	margin: 0 0 30px
+
+.feed-item__timeout
+	position: absolute
+	width: 240px
+	right: 20px
+	top: 120px
+
+	&-title 
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+
+	&-value 
+		display: inline-block
+		vertical-align: middle
+		font-size: 24px
+		font-weight: 700
+		color: $black
+
+.feed-item__fill-button
+	@extend .button
+	background: $blue
+	color: $white
+	display: inline-block
+	vertical-align: middle
+	font-weight: 700
+	margin-right: 10px
+	border: 2px solid $blue
+	line-height: 38px
+
+.feed-item__outlined-button
+	@extend .button
+	display: inline-block
+	vertical-align: middle
+	font-weight: 700
+	margin-right: 10px
+	border: 2px solid $blue
+	color: $blue
+	line-height: 38px
+
+.feed-item__disabled-button
+	@extend .button
+	display: inline-block
+	vertical-align: middle
+	font-weight: 700
+	margin-right: 10px
+	border: 2px solid $grey
+	color: $grey
+	line-height: 38px
+
+
+
+.feed-conditions
+	position: relative
+	width: 320px
+	min-height: 600px
+	border-radius: 20px
+	padding: 40px 30px
+	color: $white
+	background: $blue url(../img/condition-bg.png) bottom center no-repeat
+	background-size: contain
+
+	&__title
+		font-size: 26px
+		font-weight: 700
+		margin: 0 0 20px
+
+	&__text
+		font-size: 14px
+		font-weight: 700
+		margin: 0 0 15px
+		letter-spacing: 0.3px
+
+
+.modal-container
+	position: fixed
+	z-index: 100
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0, .75)
+
+.modal-close-layout
+	position: absolute
+	z-index: 105
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+
+.modal-wrap
+	position: relative
+	z-index: 110
+	width: 100%
+	max-width: 450px
+	background: $white
+	border-radius: 15px
+	overflow: hidden
+	margin: 100px auto
+	min-height: 100px
+
+.modal-close
+	position: absolute
+	cursor: pointer
+	font-weight: 400
+	right: 20px
+	bottom: 20px
+
+.modal-task-header
+	border-bottom: 1px solid $grey
+	font-size: 0
+
+.modal-task-title
+	height: 50px
+	padding: 16px 20px 0
+	border-right: 1px solid $grey
+	width: 70%
+	font-size: 14px
+	font-weight: 700
+	display: inline-block
+	vertical-align: top
+
+.modal-task-delete
+	font-size: 14px
+	height: 50px
+	padding-top: 16px
+	font-weight: 700
+	display: inline-block
+	vertical-align: top
+	width: 30%
+	color: $red
+	cursor: pointer
+	text-align: center
+	transition: $a
+
+	&:hover
+		background: #f7f7f7
+		transition: $a
+
+.modal-task-body
+	padding-top: 15px
+	padding-bottom: 50px
+	text-decoration: underline
+
+.modal-task-row
+	padding: 4px 20px 4px
+	font-size: 0
+
+	&__title
+		font-size: 15px
+		display: inline-block
+		vertical-align: middle
+		margin-right: 6px
+
+	&__text
+		font-size: 14px
+		display: inline-block
+		vertical-align: middle
 
 
 

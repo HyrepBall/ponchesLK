@@ -175,7 +175,7 @@
 
 			<div class="page-title">
 				<h2 class="page-title__h2">
-					Тарифы
+					Создать задание
 				</h2>
 				<a href="#">
 					<img src="img/ic-arrow-left.png" alt="">
@@ -183,63 +183,319 @@
 				</a>
 			</div>
 
-			<div class="page-content tarifs-content">
+			<div class="page-content">
 				<div class="fb-row-top">
-					<div class="tarifs-item tarif-1-block">
-						<h4 class="tarifs-title">
-							Бесплатный
-						</h4>
-						<p class="tarifs-text">
-							-Комментируешь больше, 
-							чем получаешь комментариев
+					<div class="page-block pb--30 pb-step-1">
+						<h3 class="pb-title--step-1">
+							Вставьте ссылку <br>
+							на пост
+						</h3>
+						<p class="pb-text--step-1 info-text">
+							<strong>Важно</strong> ссылка должна быть
+							с принимающиего аккаунта
+							и скопирована из приложения
 						</p>
-						<div class="tarifs-button bold-text">
-							Подключить
+						<input type="text" class="pb-input--step-1" value="Вставьте ссылку" onfocus="this.value = ''" >
+						<div class="task-step-1-block">
+							<p class="pb-text right-text">
+								Введи сколько комментариев хочешь получить стоимость одного 6 баллов:
+							</p>
+							<input type="text" class="task-step-1__input" value="100" onfocus="this.value = ''">
+							<div class="task-step-1__balance">
+								<div class="task-step-1__balance-row">
+									<div class="left-text">
+										У вас на балансе:
+									</div>
+									<div class="right-text">
+										3000 баллов
+									</div>
+								</div>
+								<div class="task-step-1__balance-row">
+									<div class="left-text">
+										Можешь получить
+									</div>
+									<div class="right-text">
+										500 комментариев
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="tarifs-item tarif-2-block">
-						<h4 class="tarifs-title">
-							VIP
-						</h4>
-						<h5 class="tarifs-subtitle">
-							600р/месяц на 1 аккаунт
-						</h5>
-						<p class="tarifs-text">
-							-Пакет 600 комментариев
-						</p>
-						<p class="tarifs-text">
-							-Комментировать других
-							не нужно
-						</p>
-						<div class="tarifs-button bold-text">
-							Подключить
+					<div class="page-block pb--60 pb-step-2">
+						<div class="fb-row-top">
+							<div class="step-2-task">
+								<h3 class="pb-title">
+									Укажи тему <br>
+									комментариев
+								</h3>
+								<p class="pb-text grey-text info-text">
+									Чем более подробнее напишешь, какого 
+									формата  нужны комментарии и о чем  твой
+									пост, тем качественней получишькомментарии. 
+									Можно просить лайки и сохранения, 
+									но пользователи сервиса не обязаны это делать.
+								</p>
+								
+								<textarea name="" id="" class="task-textarea" onfocus="this.value = ''">Напиши здесь тему ...</textarea>
+
+							</div>
+							<div class="step-2-comments">
+								<h3 class="pb-title">
+									Выбери режим раздачи комментариев 
+								</h3>
+								
+								<div class="task-pick-text">
+									<input name="task-pick" id="task-pick-1" type="radio">
+									<label for="task-pick-1">
+										Средняя скорость получения комментариев,
+										комментируют люди частично подходящие 
+										под настройки аудитории из профиля
+									</label>
+								</div>
+
+								<div class="task-pick-text">
+									<input name="task-pick" id="task-pick-2" type="radio">
+									<label for="task-pick-2">
+										Низкая скорость  получения комментариев.
+										<strong>комментируют, ТОЛЬКО</strong> аудитория из
+										настроек профиля ( возможно не полное
+										выполнение заказа) 
+									</label>
+								</div>
+
+								<div class="task-pick-text">
+									<input name="task-pick" id="task-pick-3" type="radio">
+									<label for="task-pick-3">
+										Высокая скорость получения комментариев, 
+										твое  задание получат все участники  сервиса 
+									</label>
+								</div>
+
+								<div class="task-pick-button">
+									Создать задание
+								</div>
+
+								<p class="task-pick-button-status">
+									Задание успешно создано
+								</p>
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="page-block pb--100 task-table-block">
+						<h2 class="balance-title">
+							История заданий
+						</h2>
+
+						<div class="task-table-container">
+							<div class="task-table-header task-table-row">
+								<div class="task-table-cell tt-account">
+									Аккаунт
+								</div>
+								<div class="task-table-cell tt-status">
+									Статус
+								</div>
+								<div class="task-table-cell tt-progress">
+									Прогресс
+								</div>
+								<div class="task-table-cell tt-date">
+									Дата
+								</div>
+								<div class="task-table-cell tt-details"></div>
+							</div>
+
+							<div class="task-table-body">
+								<div class="task-table-month">
+									<div class="tt-month-title">
+										Май
+									</div>
+									<div class="task-table-row">
+										<div class="task-table-cell tt-account">
+											name_name
+										</div>
+										<div class="task-table-cell tt-status">
+											Активно
+										</div>
+										<div class="task-table-cell tt-progress">
+											0 / 0
+										</div>
+										<div class="task-table-cell tt-date">
+											07_02_2018 22:21
+										</div>
+										<a href="#" class="task-table-cell tt-details">
+											Подробнее
+										</a>
+									</div>
+									<div class="task-table-row">
+										<div class="task-table-cell tt-account">
+											name_name
+										</div>
+										<div class="task-table-cell tt-status">
+											Активно
+										</div>
+										<div class="task-table-cell tt-progress">
+											0 / 0
+										</div>
+										<div class="task-table-cell tt-date">
+											07_02_2018 22:21
+										</div>
+										<a href="#" class="task-table-cell tt-details">
+											Подробнее
+										</a>
+									</div>
+									<div class="task-table-row">
+										<div class="task-table-cell tt-account">
+											name_name
+										</div>
+										<div class="task-table-cell tt-status">
+											Активно
+										</div>
+										<div class="task-table-cell tt-progress">
+											0 / 0
+										</div>
+										<div class="task-table-cell tt-date">
+											07_02_2018 22:21
+										</div>
+										<a href="#" class="task-table-cell tt-details">
+											Подробнее
+										</a>
+									</div>
+								</div>
+								<div class="task-table-month">
+									<div class="tt-month-title">
+										Апрель
+									</div>
+									<div class="task-table-row">
+										<div class="task-table-cell tt-account">
+											name_name
+										</div>
+										<div class="task-table-cell tt-status">
+											Активно
+										</div>
+										<div class="task-table-cell tt-progress">
+											0 / 0
+										</div>
+										<div class="task-table-cell tt-date">
+											07_02_2018 22:21
+										</div>
+										<a href="#" class="task-table-cell tt-details">
+											Подробнее
+										</a>
+									</div>
+									<div class="task-table-row">
+										<div class="task-table-cell tt-account">
+											name_name
+										</div>
+										<div class="task-table-cell tt-status">
+											Активно
+										</div>
+										<div class="task-table-cell tt-progress">
+											0 / 0
+										</div>
+										<div class="task-table-cell tt-date">
+											07_02_2018 22:21
+										</div>
+										<a href="#" class="task-table-cell tt-details">
+											Подробнее
+										</a>
+									</div>
+									<div class="task-table-row">
+										<div class="task-table-cell tt-account">
+											name_name
+										</div>
+										<div class="task-table-cell tt-status">
+											Активно
+										</div>
+										<div class="task-table-cell tt-progress">
+											0 / 0
+										</div>
+										<div class="task-table-cell tt-date">
+											07_02_2018 22:21
+										</div>
+										<a href="#" class="task-table-cell tt-details">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
-					<div class="tarifs-item tarif-3-block">
-						<h4 class="tarifs-title">
-							Безлимит
-						</h4>
-						<h5 class="tarifs-subtitle">
-							4000р/месяц на 1 аккаунт
-						</h5>
-						<p class="tarifs-text">
-							-Пакет до 150 комментариев <br>
-							на безлимитное 
-							количество постов. <br>
-							-Комментировать других
-							не нужно. <br>
-							-Автоматическая накрутка 
-							комментариев  
-						</p>
-						<div class="tarifs-button bold-text">
-							Подключить
-						</div>
-					</div>
+
 				</div>
 			</div>
 
 		</main>
 
+	</div>
+
+
+
+
+	<div class="modal-container">
+		<div class="modal-close-layout"></div>
+		<div class="modal-wrap">
+			<span class="modal-close">Закрыть</span>
+			<div class="modal-task-header">
+				<div class="modal-task-title">
+					Задание №132322
+				</div>
+				<div class="modal-task-delete">
+					Удалить
+				</div>
+			</div>
+			<div class="modal-task-body">
+				<div class="modal-task-row">
+					<div class="modal-task-row__title bold-text">
+						Автор:
+					</div>
+					<div class="modal-task-row__text">
+						<a href="#">bars.uk</a>
+					</div>
+				</div>
+				<div class="modal-task-row">
+					<div class="modal-task-row__title bold-text">
+						Фото:
+					</div>
+					<div class="modal-task-row__text">
+						<a href="#">http://instagram.ru/asWWadcaa</a>
+					</div>
+				</div>
+				<div class="modal-task-row">
+					<div class="modal-task-row__title bold-text">
+						Заказано комментариев:
+					</div>
+					<div class="modal-task-row__text bold-text">
+						5
+					</div>
+				</div>
+				<div class="modal-task-row">
+					<div class="modal-task-row__title bold-text">
+						Выполнено:
+					</div>
+					<div class="modal-task-row__text bold-text">
+						4
+					</div>
+				</div>
+				<div class="modal-task-row">
+					<div class="modal-task-row__text ">
+						<strong>Статус: </strong>
+						Завершено частично. В сервисе не  нашлось необходимое 
+						количество комментаторов. Остаток баллов мы вернули на баланс.
+					</div>
+				</div>
+
+				<div class="modal-task-row">
+					<div class="modal-task-row__text ">
+						<strong>Описание: </strong>
+						Напишите о свитере, что красиво выглядит и все
+						такое прочее. Ставим лайки и сохранения
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</div>
 	
 	
