@@ -1,60 +1,29 @@
 $(document).ready(function() {
 
-	
-
-	
-	$('.mac-tabs').tabslet({
-		attribute: 'alt',
-		animation: true,
-		controls: {
-			prev: '.mac-prev',
-			next: '.mac-next'
-		}
+	$('.show-task-button').click(function() {
+		$('.task-modal').addClass('open');
 	});
-	$('.pluses-tabs').tabslet({
-		attribute: 'alt',
-		animation: true,
-
+	$('.tarifs-button').click(function() {
+		$('.tarifs-modal').addClass('open');
+	});
+	$('.history-row__disput').click(function() {
+		$('.disput-modal').addClass('open');
 	});
 
-	$('.happy-slider').slick({
-		infinite: true,
-		slidesToShow: 5,
-		slidesToScroll: 1,
-		responsive: [
-				{
-					breakpoint: 1400,
-					settings: {
-						slidesToShow: 4,
-						slidesToScroll: 1,
-						infinite: true,
-					}
-				},
-				{
-					breakpoint: 950,
-					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-						infinite: true,
-					}
-				},
-				{
-					breakpoint: 710,
-					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						infinite: true,
-					}
-				},
-				{
-					breakpoint: 410,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						infinite: true,
-					}
-				},
-			],
+	
+	$(`
+		.modal-close,
+		.modal-close-layout,
+		.modal-back-close,
+		.disput-modal-cancel `)
+		.click(function() {
+			$(this).closest('.modal-container').removeClass('open')
+	});
+
+	$(function() {
+	  $('select').selectric({
+	  	maxHeight: 200
+	  });
 	});
 
 	//form

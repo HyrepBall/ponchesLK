@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/vendor/animate.css">
 	<link rel="stylesheet" href="css/vendor/fonts.css">
 	<!---->
-	<link rel="stylesheet" type="text/css" href="css/vendor/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/vendor/selectric.css"/>
 	<link rel="stylesheet" type="text/css" href="css/vendor/slick-theme.css"/>
 	<link rel="stylesheet" href="css/style.css">
 	<!-- CSS end -->
@@ -186,6 +186,7 @@
 			<div class="page-content tarifs-content">
 				<div class="fb-row-top">
 					<div class="tarifs-item tarif-1-block">
+						<img src="img/tarrifs-1-ic.png" alt="" class="tarifs-item__img">
 						<h4 class="tarifs-title">
 							Бесплатный
 						</h4>
@@ -198,6 +199,7 @@
 						</div>
 					</div>
 					<div class="tarifs-item tarif-2-block">
+						<img src="img/tarrifs-2-ic.png" alt="" class="tarifs-item__img">
 						<h4 class="tarifs-title">
 							VIP
 						</h4>
@@ -216,6 +218,7 @@
 						</div>
 					</div>
 					<div class="tarifs-item tarif-3-block">
+						<img src="img/tarrifs-3-ic.png" alt="" class="tarifs-item__img">
 						<h4 class="tarifs-title">
 							Безлимит
 						</h4>
@@ -241,6 +244,60 @@
 		</main>
 
 	</div>
+
+
+
+
+	<div class="modal-container tarifs-modal">
+		<div class="modal-close-layout"></div>
+		<div class="modal-wrap">
+			<div class="modal-back-close">
+				<span class="modal-back-close__arr">&#8592;</span>
+				<span>Назад</span>
+			</div>
+			<h4>
+				Выбери аккаунт, на который 
+				нужно подключить тариф
+			</h4>
+			<select name="" id="">
+				<option value="">name_name_1</option>
+				<option value="">name_name_2</option>
+				<option value="">name_name_3</option>
+				<option value="">name_name_4</option>
+				<option value="">name_name_5</option>
+			</select>
+			<h5>
+				Выберите  срок  действия тарифа:
+			</h5>
+			<div class="tafirs-pick-price">
+				<div class="tarifs-pick-row">
+					<input name="tarifs-pick-radio" id="tarifs-1m" type="radio">
+					<label for="tarifs-1m">1 месяц - 600р</label>
+				</div>
+				<div class="tarifs-pick-row">
+					<input name="tarifs-pick-radio" id="tarifs-2m" type="radio">
+					<label for="tarifs-2m">2 месяца - 1140р</label>
+				</div>
+				<div class="tarifs-pick-row">
+					<input name="tarifs-pick-radio" id="tarifs-3m" type="radio">
+					<label for="tarifs-3m">3 месяца - 1680р экономия 200р</label>
+				</div>
+				<div class="tarifs-pick-row">
+					<input name="tarifs-pick-radio" id="tarifs-6m" type="radio">
+					<label for="tarifs-6m">6 месяцев - 3100р экономия 500р</label>
+				</div>
+			</div>
+			<h6>
+				Вам начислится:
+			</h6>
+			<div class="tarifs-pick-price-input">
+				234 баллов
+			</div>
+			<div class="tarifs-pick-button">
+				Подключить
+			</div>
+		</div>
+	</div>
 	
 	
 
@@ -251,8 +308,7 @@
 <script>
 	new WOW().init();
 </script>
-<script src="js/jquery.tabslet.min.js"></script>
-<script src="js/slick.min.js"></script>
+<script src="js/selectric.min.js"></script>
 
 <script src="js/main.js"></script>
 
