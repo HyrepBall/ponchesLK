@@ -103,7 +103,11 @@ body {
   height: 42px;
   line-height: 42px;
   padding: 0 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: ease-out 0.22s; }
+  .button:hover, .header__balance:hover, .header__exit:hover, .send-form:hover, .button-link-page:hover, .disable-comments:hover, .balance-form__pay:hover, .balance-form__tarrifs-link:hover, .balance-form__exchange-button:hover, .tarifs-button:hover, .task-pick-button:hover, .feed-item__fill-button:hover, .feed-item__outlined-button:hover, .feed-item__disabled-button:hover, .tarifs-pick-button:hover, .disput-modal-send:hover, .disput-modal-cancel:hover {
+    transform: scale(1.05);
+    transition: ease-out 0.22s; }
   .button span, .header__balance span, .header__exit span, .send-form span, .button-link-page span, .disable-comments span, .balance-form__pay span, .balance-form__tarrifs-link span, .balance-form__exchange-button span, .tarifs-button span, .task-pick-button span, .feed-item__fill-button span, .feed-item__outlined-button span, .feed-item__disabled-button span, .tarifs-pick-button span, .disput-modal-send span, .disput-modal-cancel span {
     display: inline-block;
     vertical-align: middle;
@@ -159,13 +163,18 @@ body {
         transition: ease-out 0.22s; }
       .nav-links a:hover .nav-links__title {
         visibility: visible;
-        transition: ease-out 0.22s;
-        opacity: 1; }
+        transform: translateX(0px);
+        opacity: 1;
+        transition: ease-out 0.22s; }
     .nav-links a svg {
       height: 24px;
       display: inline-block;
       vertical-align: middle;
       transition: ease-out 0.22s; }
+  .nav-links .current-nav {
+    background: #000; }
+    .nav-links .current-nav svg {
+      fill: #fff; }
 
 .nav-links__title {
   visibility: hidden;
@@ -177,8 +186,9 @@ body {
   color: #fff;
   padding: 0 30px 0 10px;
   border-radius: 0 30px 30px 0;
-  transition: ease-out 0.22s;
-  opacity: 0; }
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: ease-out 0.22s; }
 
 .main {
   width: 100%;
@@ -225,7 +235,7 @@ body {
       font-size: 14px; }
 
 .page-block {
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   margin: 0 1% 40px;
   padding: 40px 20px 30px 35px;
@@ -262,7 +272,8 @@ body {
     width: 100%;
     height: 150px;
     left: 0;
-    top: 0;
+    top: -1px;
+    border-radius: 20px;
     background: url(../img/step-1-ic.png) center no-repeat;
     background-size: cover; }
 
@@ -307,6 +318,8 @@ body {
 
 .step-2-pick, .step-2-task {
   width: 54%; }
+  .step-2-pick .pb-text, .step-2-task .pb-text {
+    padding-right: 20px; }
 
 .step-2-interest {
   width: 46%; }
@@ -513,6 +526,8 @@ body {
 
 .pb-3-free {
   width: 30%; }
+  .pb-3-free .pb-text {
+    padding-right: 20px; }
   .pb-3-free .pb-text strong {
     font-weight: 700; }
   .pb-3-free .pb-text span {
@@ -568,7 +583,7 @@ body {
 
 .step-5-text--left {
   width: 55%;
-  padding-right: 2%; }
+  padding-right: 20px; }
 
 .step-5-text--right {
   width: 45%; }
@@ -634,6 +649,7 @@ body {
 
 .balance-month-row {
   position: relative;
+  width: 100%;
   background: #fff;
   border-radius: 25px;
   display: inline-block;
@@ -659,11 +675,20 @@ body {
     cursor: pointer; }
 
 .balance-form {
+  position: relative;
   background: #000;
   padding-top: 100px;
   padding-bottom: 60px;
   color: #fff;
-  width: 34%; }
+  width: 34%;
+  max-width: 530px; }
+  .balance-form:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    left: 0;
+    top: 0; }
 
 .balance-form__current {
   margin-bottom: 30px; }
@@ -754,20 +779,21 @@ body {
 .tarifs-item {
   position: relative;
   background: #fff;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 40px 30px 40px 50px;
   width: 29%;
-  margin: 0 2% 30px; }
+  max-width: 440px;
+  margin: 0 2% 50px; }
   .tarifs-item__img {
     position: absolute;
     display: block; }
 
 .tarif-1-block {
-  padding-top: 250px; }
+  padding-top: 220px; }
   .tarif-1-block .tarifs-item__img {
-    width: 260px;
+    width: 230px;
     right: -15px;
-    top: -16px; }
+    top: -15px; }
   .tarif-1-block .tarifs-button {
     margin-top: 40px; }
 
@@ -782,9 +808,9 @@ body {
     margin-top: 20px; }
 
 .tarif-3-block {
-  padding-top: 170px; }
+  padding-top: 140px; }
   .tarif-3-block .tarifs-item__img {
-    width: 300px;
+    width: 270px;
     z-index: 0;
     top: 0;
     left: -49px; }
@@ -974,9 +1000,17 @@ body {
   .tt-details:hover {
     text-decoration: underline; }
 
+.feed-content .fb-row-top {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
 .feed-list {
-  width: 100%;
-  max-width: 800px; }
+  width: 60%;
+  max-width: 800px;
+  margin: 0 1% 50px; }
 
 .feed-item {
   border-radius: 20px;
@@ -1054,11 +1088,13 @@ body {
 
 .feed-conditions {
   position: relative;
-  width: 320px;
+  width: calc(100% - 800px - 30px);
+  max-width: 400px;
   min-height: 600px;
   border-radius: 20px;
   padding: 40px 30px;
   color: #fff;
+  margin: 0 1% 50px;
   background: #0094a7 url(../img/condition-bg.png) bottom center no-repeat;
   background-size: contain; }
   .feed-conditions__title {
@@ -1271,5 +1307,69 @@ body {
     font-size: 14px;
     display: inline-block;
     vertical-align: middle; }
+
+@media only screen and (min-width: 1440px) {
+  .tarif-1-block {
+    padding-top: 350px; }
+    .tarif-1-block .tarifs-item__img {
+      width: 370px;
+      top: -24px;
+      right: -21px; }
+
+  .tarif-2-block {
+    padding-top: 60px;
+    padding-bottom: 310px; }
+    .tarif-2-block .tarifs-item__img {
+      width: 320px; }
+
+  .tarif-3-block {
+    padding-top: 280px;
+    padding-bottom: 60px; }
+    .tarif-3-block .tarifs-item__img {
+      width: 350px;
+      left: -57px; }
+
+  .balance-form {
+    padding: 130px 60px 80px; }
+
+  .options-content > .fb-row-top {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+
+  .balance-content > .fb-row-top {
+    max-width: 1440px;
+    margin: 0 auto; }
+
+  .balance-title {
+    max-width: 1440px;
+    margin: 0 auto 20px; }
+
+  .pb-step-1 {
+    padding-top: 120px;
+    max-width: 500px; }
+
+  .pb-step-1.task-step-1 {
+    padding-top: 80px; }
+
+  .pb-step-2 {
+    max-width: 900px; }
+
+  .pb-step-3 {
+    max-width: 1440px;
+    margin: 0 4% 50px; }
+
+  .pb-step-4 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    max-width: 500px; }
+
+  .pb-step-5 {
+    max-width: 900px; }
+
+  .task-table-block {
+    max-width: 1440px; } }
 
 /*# sourceMappingURL=style.css.map */
