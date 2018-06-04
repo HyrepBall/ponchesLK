@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+	$('.feed-item__close').on('click', function() {
+		$(this).closest('.feed-item').slideUp(300)
+	});
+
+	$(window).scroll(function() {
+
+		var scrollTop = $(this).scrollTop(),
+				balanceFormOffsetTop = $('.balance-form').offset().top;
+
+		if ( scrollTop > balanceFormOffsetTop ){
+			$('.balance-form').addClass('sticky');
+		}
+		else{
+			$('.balance-form').removeClass('sticky');
+		}
+	});
+
 	$('.show-task-button').click(function() {
 		$('.task-modal').addClass('open');
 	});
@@ -21,9 +38,9 @@ $(document).ready(function() {
 	});
 
 	$(function() {
-	  $('select').selectric({
-	  	maxHeight: 200
-	  });
+		$('select').selectric({
+			maxHeight: 200
+		});
 	});
 
 	//form

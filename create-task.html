@@ -201,7 +201,7 @@
 							<p class="pb-text right-text">
 								Введи сколько комментариев хочешь получить стоимость одного 6 баллов:
 							</p>
-							<input type="text" class="task-step-1__input" value="100" onfocus="this.value = ''">
+							<input type="text" class="task-step-1__input" value="100" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
 							<div class="task-step-1__balance">
 								<div class="task-step-1__balance-row">
 									<div class="left-text">
@@ -222,7 +222,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="page-block pb--60 pb-step-2">
+					<div class="page-block pb--60 pb-step-2 task-step-2">
 						<div class="fb-row-top">
 							<div class="step-2-task">
 								<h3 class="pb-title">
@@ -232,12 +232,12 @@
 								<p class="pb-text grey-text info-text">
 									Чем более подробнее напишешь, какого 
 									формата  нужны комментарии и о чем  твой
-									пост, тем качественней получишькомментарии. 
+									пост, тем качественней получишь комментарии. 
 									Можно просить лайки и сохранения, 
 									но пользователи сервиса не обязаны это делать.
 								</p>
 								
-								<textarea name="" id="" class="task-textarea" onfocus="this.value = ''">Напиши здесь тему ...</textarea>
+								<textarea name="" id=""  class="task-textarea" onfocus="this.value = ''">Напиши здесь тему ...</textarea>
 
 							</div>
 							<div class="step-2-comments">
@@ -246,29 +246,23 @@
 								</h3>
 								
 								<div class="task-pick-text">
-									<input name="task-pick" id="task-pick-1" type="radio">
+									<input name="task-pick" id="task-pick-1" type="radio" checked="checked" >
 									<label for="task-pick-1">
-										Средняя скорость получения комментариев,
-										комментируют люди частично подходящие 
-										под настройки аудитории из профиля
+										Средняя скорость получения комментариев. Комментируют люди частично подходящие под настройки аудитории из профиля
 									</label>
 								</div>
 
 								<div class="task-pick-text">
 									<input name="task-pick" id="task-pick-2" type="radio">
 									<label for="task-pick-2">
-										Низкая скорость  получения комментариев.
-										<strong>комментируют, ТОЛЬКО</strong> аудитория из
-										настроек профиля ( возможно не полное
-										выполнение заказа) 
+										Низкая скорость получения комментариев. комментируют <strong>ТОЛЬКО</strong> аудитория из настроек профиля ( возможно неполное выполнение заказа)
 									</label>
 								</div>
 
 								<div class="task-pick-text">
 									<input name="task-pick" id="task-pick-3" type="radio">
 									<label for="task-pick-3">
-										Высокая скорость получения комментариев, 
-										твое  задание получат все участники  сервиса 
+										Высокая скорость получения комментариев. Твое задание получат все участники сервиса
 									</label>
 								</div>
 

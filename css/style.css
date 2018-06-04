@@ -95,7 +95,7 @@ body {
   font-size: 14px;
   font-family: "Montserrat", sans-serif; }
 
-.button, .header__balance, .header__exit, .send-form, .button-link-page, .disable-comments, .balance-form__pay, .balance-form__tarrifs-link, .balance-form__exchange-button, .tarifs-button, .task-pick-button, .feed-item__fill-button, .feed-item__outlined-button, .feed-item__disabled-button, .tarifs-pick-button, .disput-modal-send, .disput-modal-cancel {
+.button, .header__balance, .header__exit, .add-new-acc--button, .add-new-acc--feed, .send-form, .button-link-page, .disable-comments, .balance-form__pay, .balance-form__tarrifs-link, .balance-form__exchange-button, .tarifs-button, .task-pick-button, .feed-item__fill-button, .feed-item__outlined-button, .feed-item__disabled-button, .tarifs-pick-button, .disput-modal-send, .disput-modal-cancel {
   position: relative;
   z-index: 5;
   border-radius: 30px;
@@ -105,14 +105,14 @@ body {
   padding: 0 20px;
   cursor: pointer;
   transition: ease-out 0.22s; }
-  .button:hover, .header__balance:hover, .header__exit:hover, .send-form:hover, .button-link-page:hover, .disable-comments:hover, .balance-form__pay:hover, .balance-form__tarrifs-link:hover, .balance-form__exchange-button:hover, .tarifs-button:hover, .task-pick-button:hover, .feed-item__fill-button:hover, .feed-item__outlined-button:hover, .feed-item__disabled-button:hover, .tarifs-pick-button:hover, .disput-modal-send:hover, .disput-modal-cancel:hover {
+  .button:hover, .header__balance:hover, .header__exit:hover, .add-new-acc--button:hover, .add-new-acc--feed:hover, .send-form:hover, .button-link-page:hover, .disable-comments:hover, .balance-form__pay:hover, .balance-form__tarrifs-link:hover, .balance-form__exchange-button:hover, .tarifs-button:hover, .task-pick-button:hover, .feed-item__fill-button:hover, .feed-item__outlined-button:hover, .feed-item__disabled-button:hover, .tarifs-pick-button:hover, .disput-modal-send:hover, .disput-modal-cancel:hover {
     transform: scale(1.05);
     transition: ease-out 0.22s; }
-  .button span, .header__balance span, .header__exit span, .send-form span, .button-link-page span, .disable-comments span, .balance-form__pay span, .balance-form__tarrifs-link span, .balance-form__exchange-button span, .tarifs-button span, .task-pick-button span, .feed-item__fill-button span, .feed-item__outlined-button span, .feed-item__disabled-button span, .tarifs-pick-button span, .disput-modal-send span, .disput-modal-cancel span {
+  .button span, .header__balance span, .header__exit span, .add-new-acc--button span, .add-new-acc--feed span, .send-form span, .button-link-page span, .disable-comments span, .balance-form__pay span, .balance-form__tarrifs-link span, .balance-form__exchange-button span, .tarifs-button span, .task-pick-button span, .feed-item__fill-button span, .feed-item__outlined-button span, .feed-item__disabled-button span, .tarifs-pick-button span, .disput-modal-send span, .disput-modal-cancel span {
     display: inline-block;
     vertical-align: middle;
     margin: 0 4px; }
-  .button img, .header__balance img, .header__exit img, .send-form img, .button-link-page img, .disable-comments img, .balance-form__pay img, .balance-form__tarrifs-link img, .balance-form__exchange-button img, .tarifs-button img, .task-pick-button img, .feed-item__fill-button img, .feed-item__outlined-button img, .feed-item__disabled-button img, .tarifs-pick-button img, .disput-modal-send img, .disput-modal-cancel img {
+  .button img, .header__balance img, .header__exit img, .add-new-acc--button img, .add-new-acc--feed img, .send-form img, .button-link-page img, .disable-comments img, .balance-form__pay img, .balance-form__tarrifs-link img, .balance-form__exchange-button img, .tarifs-button img, .task-pick-button img, .feed-item__fill-button img, .feed-item__outlined-button img, .feed-item__disabled-button img, .tarifs-pick-button img, .disput-modal-send img, .disput-modal-cancel img {
     display: inline-block;
     vertical-align: middle;
     margin: 0 4px; }
@@ -208,6 +208,8 @@ body {
     margin: 0 8px;
     background: #000;
     color: #fff; }
+    .header__balance:hover {
+      transform: scale(1); }
     .header__balance span {
       margin: 0 4px; }
   .header__exit {
@@ -277,6 +279,9 @@ body {
     background: url(../img/step-1-ic.png) center no-repeat;
     background-size: cover; }
 
+.pb-step-6:before {
+  display: none; }
+
 .pb-title--step-1 {
   font-size: 28px;
   color: #fff;
@@ -298,7 +303,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   outline: none;
   padding-bottom: 7px;
-  margin: 0 0 30px;
+  margin: 25px 0 35px;
   font-size: 14px;
   color: #fff;
   background: none; }
@@ -390,7 +395,8 @@ body {
     transition: ease-out 0.22s; }
   .pick-radio-box input:checked + label {
     color: #0094a7;
-    transform: scale(1); }
+    transform: scale(1);
+    font-weight: 700; }
 
 .pick-actions__select {
   display: block;
@@ -415,7 +421,7 @@ body {
 .selectric-open .selectric {
   border-bottom: 1px solid #9f9f9f; }
 
-.selectric .button, .selectric .header__balance, .selectric .header__exit, .selectric .send-form, .selectric .button-link-page, .selectric .disable-comments, .selectric .balance-form__pay, .selectric .balance-form__tarrifs-link, .selectric .balance-form__exchange-button, .selectric .tarifs-button, .selectric .task-pick-button, .selectric .feed-item__fill-button, .selectric .feed-item__outlined-button, .selectric .feed-item__disabled-button, .selectric .tarifs-pick-button, .selectric .disput-modal-send, .selectric .disput-modal-cancel {
+.selectric .button, .selectric .header__balance, .selectric .header__exit, .selectric .add-new-acc--button, .selectric .add-new-acc--feed, .selectric .send-form, .selectric .button-link-page, .selectric .disable-comments, .selectric .balance-form__pay, .selectric .balance-form__tarrifs-link, .selectric .balance-form__exchange-button, .selectric .tarifs-button, .selectric .task-pick-button, .selectric .feed-item__fill-button, .selectric .feed-item__outlined-button, .selectric .feed-item__disabled-button, .selectric .tarifs-pick-button, .selectric .disput-modal-send, .selectric .disput-modal-cancel {
   background: none; }
 
 .selectric .label {
@@ -456,6 +462,7 @@ body {
       transition: ease-out 0.22s; }
   .interest-radio-box input:checked + label {
     color: #0094a7;
+    font-weight: 700;
     transition: ease-out 0.22s; }
     .interest-radio-box input:checked + label:before {
       content: "";
@@ -470,6 +477,27 @@ body {
 
 .step-2-buttons {
   padding-top: 20px; }
+
+.add-new-acc {
+  text-align: center;
+  margin-bottom: 60px; }
+  .add-new-acc--button {
+    display: inline-block;
+    vertical-align: middle;
+    background: #0094a7;
+    border: 2px solid #0094a7;
+    color: #fff;
+    line-height: 38px;
+    margin-right: 10px;
+    font-weight: 700; }
+  .add-new-acc--feed {
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    border: 2px solid #0094a7;
+    color: #0094a7;
+    line-height: 38px;
+    font-weight: 700; }
 
 .send-form {
   outline: none;
@@ -681,14 +709,17 @@ body {
   padding-bottom: 60px;
   color: #fff;
   width: 34%;
-  max-width: 530px; }
+  max-width: 420px; }
   .balance-form:after {
     content: "";
     position: absolute;
     width: 100%;
     height: 120px;
     left: 0;
-    top: 0; }
+    top: -1px;
+    border-radius: 19px 19px 0 0;
+    background: url(../img/step-1-ic.png) center no-repeat;
+    background-size: cover; }
 
 .balance-form__current {
   margin-bottom: 30px; }
@@ -736,7 +767,7 @@ body {
   font-size: 0; }
 
 .balance-form__exchange-input {
-  width: 150px;
+  width: 140px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px; }
@@ -744,10 +775,10 @@ body {
     display: inline-block;
     vertical-align: bottom;
     background: none;
-    width: 100px;
+    width: 80px;
     padding-bottom: 10px;
     margin-right: 10px;
-    font-size: 30px;
+    font-size: 22px;
     color: #fff;
     border: none;
     border-bottom: 2px solid #fff;
@@ -760,10 +791,11 @@ body {
     color: #fff; }
 
 .balance-form__exchange-button {
-  width: 185px;
+  width: 165px;
   display: inline-block;
   vertical-align: middle;
   font-size: 13px;
+  padding: 0 10px;
   font-weight: 700;
   color: #fff;
   border: 2px solid #fff;
@@ -814,6 +846,12 @@ body {
     z-index: 0;
     top: 0;
     left: -49px; }
+  .tarif-3-block .tarifs-item__img-3 {
+    position: absolute;
+    width: 150px;
+    z-index: 0;
+    bottom: -3px;
+    right: -3px; }
   .tarif-3-block .tarifs-button {
     margin-top: 10px; }
 
@@ -842,6 +880,17 @@ body {
   padding: 0 25px;
   height: 45px;
   line-height: 45px; }
+
+.task-step-1 {
+  max-width: 350px; }
+  .task-step-1 .pb-title--step-1 {
+    font-size: 26px;
+    margin: 0 0 8px;
+    line-height: 24px; }
+  .task-step-1 .pb-text--step-1 {
+    margin: 0 0 12px; }
+  .task-step-1 .pb-input--step-1 {
+    margin: 20px 0 30px; }
 
 .task-step-1-block {
   color: #fff; }
@@ -1026,6 +1075,19 @@ body {
     padding: 0; }
   .feed-item.feed-item--system .feed-item__text {
     padding: 0; }
+  .feed-item.feed-item--system-error .feed-item__text {
+    position: relative;
+    padding: 0 180px 0 70px; }
+    .feed-item.feed-item--system-error .feed-item__text:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0px;
+      border-radius: 50%;
+      background: #dd375a url(../img/system-error-ic.png) center no-repeat; }
 
 .feed-item__close {
   position: absolute;
@@ -1040,7 +1102,8 @@ body {
   margin: 0 0 20px; }
 
 .feed-item__text {
-  margin: 0 0 30px; }
+  margin: 0 0 30px;
+  font-size: 13px; }
 
 .feed-item__timeout {
   position: absolute;
@@ -1106,7 +1169,32 @@ body {
     font-weight: 700;
     margin: 0 0 15px;
     letter-spacing: 0.3px; }
+  .feed-conditions__button {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    bottom: -55px;
+    border-radius: 20px;
+    border: 2px solid #0094a7;
+    font-weight: 700;
+    background: #0094a7;
+    height: 42px;
+    line-height: 38px;
+    padding: 0 18px;
+    cursor: pointer;
+    transform-origin: 0px;
+    animation: bounceBounce 1s ease-in-out 4; }
 
+@keyframes bounceBounce {
+  0% {
+    transform: scale(1) translateX(-50%); }
+  50% {
+    transform: scale(0.8) translateX(-50%); }
+  100% {
+    transform: scale(1) translateX(-50%); } }
 .modal-container {
   position: fixed;
   overflow-y: scroll;
@@ -1181,6 +1269,24 @@ body {
   background: #0094a7;
   font-weight: 700;
   color: #fff; }
+
+.modal-underwrap-pay-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -60px;
+  color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+  border: 2px solid #fff;
+  height: 42px;
+  line-height: 38px;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: ease-out 0.22s; }
+  .modal-underwrap-pay-button:hover {
+    transform: scale(1.05) translateX(-50%);
+    transition: ease-out 0.22s; }
 
 .disput-modal .modal-wrap {
   padding: 30px;
@@ -1258,7 +1364,11 @@ body {
   cursor: pointer;
   font-weight: 400;
   right: 20px;
-  bottom: 20px; }
+  bottom: 20px;
+  transition: ease-out 0.22s; }
+  .modal-close:hover {
+    transform: scale(1.1);
+    transition: ease-out 0.22s; }
 
 .modal-task-header {
   border-bottom: 1px solid #9f9f9f;
@@ -1287,7 +1397,7 @@ body {
   text-align: center;
   transition: ease-out 0.22s; }
   .modal-task-delete:hover {
-    background: #f7f7f7;
+    background: #f1f1f1;
     transition: ease-out 0.22s; }
 
 .modal-task-body {
@@ -1309,6 +1419,11 @@ body {
     vertical-align: middle; }
 
 @media only screen and (min-width: 1440px) {
+  .page-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto; }
+
   .tarif-1-block {
     padding-top: 350px; }
     .tarif-1-block .tarifs-item__img {
@@ -1330,14 +1445,7 @@ body {
       left: -57px; }
 
   .balance-form {
-    padding: 130px 60px 80px; }
-
-  .options-content > .fb-row-top {
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center; }
+    padding: 130px 50px 80px; }
 
   .balance-content > .fb-row-top {
     max-width: 1440px;
@@ -1348,18 +1456,22 @@ body {
     margin: 0 auto 20px; }
 
   .pb-step-1 {
-    padding-top: 120px;
+    padding-top: 90px;
     max-width: 500px; }
 
   .pb-step-1.task-step-1 {
-    padding-top: 80px; }
+    padding-top: 80px;
+    max-width: 390px; }
 
   .pb-step-2 {
     max-width: 900px; }
 
+  .task-step-2 {
+    max-width: none; }
+
   .pb-step-3 {
-    max-width: 1440px;
-    margin: 0 4% 50px; }
+    width: 100%;
+    margin: 0 1% 50px; }
 
   .pb-step-4 {
     padding-top: 50px;
