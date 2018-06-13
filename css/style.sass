@@ -284,6 +284,8 @@ body
 
 	
 .pb-title--step-1
+	position: relative
+	z-index: 10
 	font-size: 28px
 	color: $white
 	margin: 0 0 12px
@@ -1567,6 +1569,22 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // RESPONSIVE
 @media only screen and (min-width : 1440px) 
 	.page-content
@@ -1704,11 +1722,86 @@ body
 		width: 100%
 		padding-top: 15px
 
+	.step-2-comments
+		width: 100%
+
+
+
+@media only screen and (max-width : 1270px)
+	.balance-form__pay,
+	.balance-form__tarrifs-link
+		display: block
+		margin: 0 auto 20px 
+		width: 150px
+
+
+	.balance-form__exchange-input
+		display: block
+		margin: 0 auto 25px
+	.balance-form__exchange-button
+		display: block
+		margin: 0 auto 15px
+		width: 200px
+
+	.feed-content
+		.feed-list
+			order: 2
+			width: 100%
+			margin: 0 0 50px
+
+		.feed-conditions
+			order: 1
+			width: 100%
+			max-width: 500px
+			margin: 0 0 120px
+
+
+
+@media only screen and (max-width : 1200px)
+	.tarifs-item
+		width: 100%
+		max-width: 500px
+		padding-left: 30px
+
+	.tarif-1-block
+		padding-top: 180px
+
+	.tarif-2-block
+		padding-bottom: 150px
+
+	.tarif-3-block .tarifs-item__img
+		right: 0
+		left: auto
+
+
+@media only screen and (max-width : 1100px)
+	.balance-content .fb-row-top
+		+flex-flow(column nowrap)
+		+align-items(center)
+
+	.balance-form
+		order: 1
+		width: 100%
+		max-width: 400px
+
+	.balance-content .history-block
+		order: 2
+		width: 100%
+		max-width: 600px
+
+	.task-table-month
+		padding-bottom: 30px
+
+	.tt-month-title
+		right: 4px
+		bottom: 3px
+
+
 
 
 @media only screen and (max-width : 900px)
 	.ponches-layout
-		padding: 150px 20px 0
+		padding: 150px 15px 0
 
 	.nav--left,
 	.header
@@ -1745,6 +1838,8 @@ body
 
 		.balance-form__current-row
 			color: #fff
+			padding-left: 15px
+			padding-right: 15px
 
 
 	.nav-logo-mobile-white
@@ -1884,5 +1979,213 @@ body
 		right: -23px
 		background-size: contain
 
+	.page-block
+		&:not(.balance-form)
+		&:not(.task-step-1)
+		&:not(.task-step-2)
+		&:not(.task-table-block)
+			padding: 40px 20px 30px
+			margin: 0 0 40px
+
+	.pb-step-3:after
+		display: none
+
+	.task-step-1
+		padding: 80px 25px 30px
+
+	.task-step-2
+		padding: 40px 25px 30px
+
+	.task-pick-text label:after
+		right: -10px
+
+	.task-table-container
+		overflow-x: scroll
+
+		&:after
+			position: absolute
+			content: ''
+			width: 60px
+			height: 100%
+			top: 0
+			right: 0
+			background: linear-gradient(to right, rgba(235,235,235, 0), rgba(235,235,235, 1), rgba(235,235,235, 1) )
+
+	.tt-month-title
+		left: 5px
+		bottom: 8px
+		right: auto
+
+	.task-table-block
+		padding: 0
+
+	.task-table-header.task-table-row
+		min-width: 650px
+
+	.task-table-body
+		position: relative
+		min-width: 650px
+
+	.tarifs-item
+		margin: 0 0 50px
+
+	.tarif-1-block .tarifs-item__img
+		width: 130px
+		right: -8px
+		top: -8px
+
+	.tarif-1-block
+		padding-top: 90px
+
+	.tarif-2-block .tarifs-item__img
+		width: 150px
+
+	.tarif-2-block
+		padding-bottom: 80px
+
+	.tarif-3-block .tarifs-item__img
+		width: 150px
+
+	.tarif-3-block .tarifs-item__img-3
+		width: 90px
+
+	.tarif-3-block
+		padding-top: 90px
+
+
+@media only screen and (max-width : 700px) 
+	.options-content .pb-step-3:before
+		display: none
+
+	.task-step-1__balance-row div
+		width: 100%
+
+		&.right-text
+			text-align: left
+			margin-bottom: 20px
+
+	.modal-container
+		width: 100%
+
+	.modal-wrap
+		width: calc(100% - 30px)
+
+	.tarifs-modal .modal-wrap
+		padding: 30px 20px	
+
+	.modal-underwrap-pay-button
+		width: 180px
+
+
+@media only screen and (max-width : 600px) 
+	.balance-form
+		margin-bottom: 70px
+
+	.balance-month-row
+		margin-bottom: 45px
+		padding: 12px 18px
+
+	.balance-month-row .history-row-date
+		right: auto
+		left: 20px
+		top: -23px
+
+	.add-new-acc--button,
+	.add-new-acc--feed
+		margin-bottom: 25px
+
+	.send-form,
+	.button-link-page
+		margin-bottom: 10px
+		display: inline-block
+		vertical-align: middle
+
+	.feed-content
+		.feed-list
+
+		.feed-conditions
+			max-width: 100%
+			border-radius: 0
+
+	.feed-conditions__button
+		bottom: -70px
+
+	.feed-item
+		border-radius: 13px
+		border-top: 13px solid $blue
+		padding: 50px 20px
+
+	.feed-item .feed-item__title
+		padding: 0
+
+	.feed-item__timeout
+		position: static
+		width: 100%
+		margin-bottom: 20px
+
+	.feed-item .feed-item__text
+		padding: 0
+
+	.feed-item__btns
+		text-align: center
+
+	.feed-item__fill-button,
+	.feed-item__outlined-button,
+	.feed-item__disabled-button
+		margin-bottom: 12px
+
+	.feed-item.feed-item--system-error .feed-item__text
+		padding: 0 0 0 50px
+
+	.feed-item.feed-item--system-error .feed-item__text:before
+		width: 35px
+		height: 35px
+		background-size: cover
+
+	.header-mobile__lk-buttons
+		+flex-flow(column nowrap)
+		+align-items(center)
+
+	.button.mobile__lk-link
+		margin-bottom: 15px
+		display: block
+
+
+
+@media only screen and (max-width : 500px)
+	.pick-row__label
+		width: 80px 
+		vertical-align: top
+		padding-top: 4px
+
+	.pick-row__pick-actions
+		vertical-align: top
+
+	.pick-radio-box
+		margin-bottom: 8px
+
+	.selectric-wrapper
+		width: 170px
+
+		
 
 @media only screen and (max-width : 400px) 
+	.balance-form
+		padding: 90px 15px 25px
+
+	.status-ok-image
+		margin-right: 15px
+
+	.disable-comments
+		margin-right: 0
+
+	.disput-modal-send
+		display: block
+		width: 200px
+		margin: 0 auto
+		margin-bottom: 15px
+
+	.disput-modal-cancel
+		display: block
+		width: 200px
+		margin: 0 auto
