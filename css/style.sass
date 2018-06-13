@@ -104,9 +104,12 @@ body
 	vertical-align: middle
 	margin-bottom: 60px
 
-	img
-		height: 110px
-		display: block
+.nav-logo-img
+	height: 110px
+	display: block
+
+.nav-logo-img-mobile
+	display: none
 
 .nav-links
 	padding: 0
@@ -200,6 +203,8 @@ body
 		margin: 0 8px
 		background: $white
 
+.header-mobile
+	display: none
 
 .page-title
 	margin-bottom: 60px
@@ -1569,6 +1574,10 @@ body
 		max-width: 1400px
 		margin: 0 auto
 
+	.tarifs-item
+		width: 28%
+		margin: 0 2.5% 50px
+
 	.tarif-1-block
 		padding-top: 350px
 
@@ -1633,7 +1642,247 @@ body
 	.task-table-block
 		max-width: 1440px
 
-	
+
+
+
+
+@media only screen and (max-width : 1340px)
+	.options-content .fb-row-top
+		+flex-flow(column nowrap)
+		+justify-content(center)
+		+align-items(center)
+
+	.pb-step-1
+		width: 100%
+		max-width: 650px
+		min-height: auto
+
+	.pb-title--step-1
+		max-width: 500px
+
+	.pb-step-2
+		width: 100%
+		max-width: 650px
+
+	.step-2-pick
+		width: 100%
+		margin-bottom: 30px
+
+	.step-2-interest
+		width: 100%
+
+	.pb-step-3
+		width: 100%
+		max-width: 650px
+		padding-bottom: 70px
+
+	.pb-3-free,
+	.pb-3-profile,
+	.pb-3-text
+		width: 100%
+
+	.pb-3-text
+		padding-top: 30px
+
+	.pb-step-4
+		width: 100%
+		max-width: 650px
+
+	.pb-step-5
+		width: 100%
+		max-width: 650px
+
+		.fb-row-top
+			display: block
+
+	.step-5-text--left,
+	.step-5-text--right
+		width: 100%
+		margin-bottom: 15px
+
+	.ster-2-status-info-text
+		width: 100%
+		padding-top: 15px
+
+
+
+@media only screen and (max-width : 900px)
+	.ponches-layout
+		padding: 150px 20px 0
+
+	.nav--left,
+	.header
+		display: none
+
+	.header-mobile
+		display: block
+		position: fixed
+		z-index: 100
+		left: 0
+		top: 0
+		right: 0
+
+	.header-mobile-head
+		position: relative
+		background: #fff
+		padding: 25px 30px 20px
+		margin-bottom: 15px
+		height: 70px
+		box-shadow: 0 5px 20px 0 rgba(0,0,0, .2)
+
+		&.opened
+			background: #000
+			border-bottom: 1px solid #fff
+
+			.nav-logo-mobile
+				display: none
+
+			.nav-logo-mobile-white
+				display: block
+
+			.header-mobile__lk
+				display: block
+
+		.balance-form__current-row
+			color: #fff
+
+
+	.nav-logo-mobile-white
+		display: none
+
+	.header-mobile-menu-button
+		position: absolute
+		right: 40px
+		top: 20px
+		height: 30px
+		width: 38px
+		padding: 7px
+
+		&.hidden
+			.header-mobile-menu-close
+				display: none
+
+			.header-mobile-menu-line
+				display: block
+
+		.header-mobile-menu-line
+			display: none
+			height: 1px
+			width: 100%
+			background: #111
+			margin-bottom: 9px
+
+	.header-mobile-menu-close
+		position: absolute
+		right: 0
+		color: #fff
+
+	.header-mobile__lk
+		display: none
+		background: #000
+		padding: 30px 0
+		padding-left: calc(50% - 200px)
+		padding-right: calc(50% - 200px)
+		position: absolute
+		width: 100%
+		z-index: 10
+		left: 0
+		top: 100%
+
+	.header-mobile__lk-buttons
+		padding-top: 40px
+		+flexbox()
+		+flex-flow(row wrap)
+		+justify-content(space-between)
+		+align-items(flex-start)
+
+	.mobile__lk-link
+		background: $blue
+		color: #fff
+		height: 35px
+		line-height: 33px
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px
+		font-weight: 700
+		margin-right: 4px
+
+	.mobile__lk-exit
+		background: #c63801
+		color: #fff
+		height: 35px
+		line-height: 33px
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px
+		font-weight: 700
+
+	.header-mobile-menu
+
+		.nav-links
+			+flexbox()
+			+flex-flow(row nowrap)
+			+justify-content(flex-start)
+			+align-items(flex-start)
+			overflow-y: scroll
+			padding-bottom: 10px
+
+			li 
+				display: inline-block
+				vertical-align: middle
+				margin: 0 10px
+
+			a 
+				height: 35px
+				line-height: 35px
+				background: #fff
+				font-size: 13px
+				border-radius: 30px
+				padding: 0 24px 0 40px
+				white-space: nowrap
+				box-shadow: 0 2px 15px 0 rgba(0,0,0, .17)
+
+				&:hover
+					svg
+						fill: #000
+
+				svg
+					height: 18px
+
+		.nav-links .current-nav
+			background: #fff
+
+			svg
+				fill: #000
+
+	.nav-links__title
+		visibility: visible
+		opacity: 1	
+		position: static
+		left: auto
+		color: #000
+		padding: 0 4px
+		background: none
+
+	.nav-links__svg-wrap
+		position: absolute
+		line-height: 1
+		left: 16px
+		top: 8px
+
+
+@media only screen and (max-width : 800px) 
+	.pb-step-1:before,
+	.pb-step-2:before,
+	.pb-step-4:before,
+	.pb-step-5:before
+		width: 120px
+		right: 25px
+
+	.pb-step-3:before
+		width: 130px
+		right: -23px
+		background-size: contain
 
 
 @media only screen and (max-width : 400px) 
