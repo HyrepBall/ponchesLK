@@ -205,6 +205,10 @@ body
 
 .header-mobile
 	display: none
+	transition: $a
+
+.header-mobile.scrollDown
+	transform: translateY(-101%)
 
 .page-title
 	margin-bottom: 60px
@@ -699,7 +703,9 @@ body
 .balance-title
 	margin: 0 0 30px
 	font-size: 35px
-
+	
+	&__mobile-notification
+		display: none
 
 .history-block
 	background: none
@@ -1029,12 +1035,11 @@ body
 		&:after
 			content: ''
 			position: absolute
-			right: 0px
+			right: -4px
 			top: 5px
 			width: 6px
 			height: 6px
-			background: $blue
-			opacity: 0
+			border: 2px solid $grey
 			border-radius: 100%
 
 		&:hover
@@ -1047,6 +1052,8 @@ body
 
 		&:after
 			opacity: 1
+			border: 2px solid $blue
+			background: $blue
 
 
 @keyframes zoom 
@@ -1408,6 +1415,7 @@ body
 	display: inline-block
 	border: 2px solid $white
 	height: 42px
+	text-align: center
 	line-height: 38px
 	cursor: pointer
 	padding: 0 12px
@@ -1965,6 +1973,9 @@ body
 		left: 16px
 		top: 8px
 
+	.task-pick-text label
+		padding-right: 20px
+
 
 @media only screen and (max-width : 800px) 
 	.pb-step-1:before,
@@ -1991,6 +2002,7 @@ body
 
 	.balance-content .balance-form
 		padding-top: 100px
+		margin: 0 auto 10px
 
 	.pb-step-3:after
 		display: none
@@ -2006,15 +2018,6 @@ body
 
 	.task-table-container
 		overflow-x: scroll
-
-		&:after
-			position: absolute
-			content: ''
-			width: 60px
-			height: 100%
-			top: 0
-			right: 0
-			background: linear-gradient(to right, rgba(235,235,235, 0), rgba(235,235,235, 1), rgba(235,235,235, 1) )
 
 	.tt-month-title
 		left: 5px
@@ -2077,9 +2080,26 @@ body
 
 	.tarifs-modal .modal-wrap
 		padding: 30px 20px	
+		margin: 70px auto 100px
 
 	.modal-underwrap-pay-button
 		width: 180px
+
+	.balance-title
+		text-align: center
+		margin: 0 0 10px
+
+	.balance-title__mobile-notification
+		display: block
+		text-align: center
+		margin-bottom: 30px
+
+		span, img
+			margin: 0 4px
+			display: inline-block
+			vertical-align: middle
+
+
 
 
 @media only screen and (max-width : 600px) 
@@ -2116,8 +2136,6 @@ body
 		bottom: -70px
 
 	.feed-item
-		border-radius: 13px
-		border-top: 13px solid $blue
 		padding: 50px 20px
 
 	.feed-item .feed-item__title
@@ -2148,14 +2166,43 @@ body
 		background-size: cover
 
 	.header-mobile__lk-buttons
-		+flex-flow(column nowrap)
+		+flex-flow(row nowrap)
+		+justify-content(space-around)
 		+align-items(center)
 
 	.button.mobile__lk-link
-		margin-bottom: 15px
-		display: block
+		font-size: 13px
+		display: inline-block
+		vertical-align: middle
+		padding: 0 12px
 
+	.button.mobile__lk-exit
+		font-size: 13px
+		display: inline-block
+		vertical-align: middle
+		padding: 0 14px
 
+	.header-mobile .balance-form__row--title
+		font-size: 14px
+
+	.header-mobile-menu .nav-links li
+		margin: 0 6px
+
+	.header-mobile-menu .nav-links a
+		padding: 0 10px 0 25px
+
+		svg 
+			height: 14px
+
+	.nav-links__title
+		font-size: 12px
+
+	.nav-links__svg-wrap
+		left: 8px
+		top: 9px
+
+	.balance-title
+		font-size: 24px
 
 @media only screen and (max-width : 500px)
 	.pick-row__label
